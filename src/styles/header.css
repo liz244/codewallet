@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--purple);
+  }
+  
+  nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    color: var(--dark);
+    transition: color 0.2s;
+  }
+  
+  nav a.active {
+    color: var(--green);
+    font-weight: bold;
+  }
+  

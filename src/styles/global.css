@@ -1,0 +1,31 @@
+/* Import de la police Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* Liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Couleurs globales */
+:root {
+  --purple: #9A48D0;
+  --light-purple: #B288C0;
+  --green: #7BC950;
+  --dark: #333333;
+  --white: #ffffff;
+}
