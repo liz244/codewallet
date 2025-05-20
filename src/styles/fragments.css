@@ -1,0 +1,40 @@
+.fragments-container {
+    padding: 2rem;
+  }
+  
+  .fragments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .fragments-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .fragment-card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .fragment-card h3 {
+    color: var(--purple);
+    margin-bottom: 0.5rem;
+  }
+  
+  .fragment-card button {
+    margin-top: 1rem;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

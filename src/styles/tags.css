@@ -1,0 +1,57 @@
+.tags-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .tags-container h2 {
+    color: var(--purple);
+    margin-bottom: 1.5rem;
+  }
+  
+  .new-tag {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .new-tag input {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .new-tag button {
+    background-color: var(--green);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tag-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .tag-item {
+    background: #f4f4f4;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tag-item button {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #e74c3c;
+  }
+  
