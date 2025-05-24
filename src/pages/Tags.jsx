@@ -1,14 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../components/Header';
+import { getTags, saveTags } from '../utils/storage'; // ✅ Ajouté
 import '../styles/tags.css';
 
 function Tags() {
-  const [tags, setTags] = useState(['React', 'API', 'State']);
+  const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState('');
 
+  // Charger les tags depuis localStorage au chargement
+  useEffect(() => {
+    const savedTags = getTags();
+    setTags(savedTags);
+  }, []);
+
   const addTag = () => {
-    if (newTag.trim() && !tags.includes(newTag.trim())) {
-      setTags([...tags, newTag.trim()]);
+    const cleanTag = newTag.trim();
+    if (cleanTag && !tags.includes(cleanTag)) {
+      const updatedTags = [...tags, cleanTag];
+      setTags(updatedTags);
+      saveTags(updatedTags); // ✅ Sauvegarde
       setNewTag('');
     }
   };
@@ -16,6 +26,7 @@ function Tags() {
   const deleteTag = (tagToDelete) => {
     const updated = tags.filter(tag => tag !== tagToDelete);
     setTags(updated);
+    saveTags(updated); // ✅ Sauvegarde
   };
 
   return (
@@ -35,12 +46,16 @@ function Tags() {
         </div>
 
         <ul className="tag-list">
-          {tags.map((tag, index) => (
-            <li key={index} className="tag-item">
-              {tag}
-              <button onClick={() => deleteTag(tag)}>❌</button>
-            </li>
-          ))}
+          {tags.length > 0 ? (
+            tags.map((tag, index) => (
+              <li key={index} className="tag-item">
+                {tag}
+                <button onClick={() => deleteTag(tag)}>❌</button>
+              </li>
+            ))
+          ) : (
+            <p>No tags yet.</p>
+          )}
         </ul>
       </main>
     </>
