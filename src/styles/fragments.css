@@ -20,18 +20,25 @@
     border-radius: 8px;
     padding: 1rem;
     width: 300px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(3, 3, 3, 0.1);
   }
   
   .fragment-card h3 {
-    color: var(--purple);
+    color: #9A48D0;
     margin-bottom: 0.5rem;
   }
+  
+  
+  .view-btn:hover {
+    color: #9A48D0;
+  }
+  
+  
   
   .fragment-card button {
     margin-top: 1rem;
     background-color: var(--green);
-    color: white;
+    color:rgb(249, 251, 248);
     border: none;
     padding: 0.4rem 1rem;
     border-radius: 5px;

@@ -36,7 +36,8 @@ function Fragments() {
               <div key={fragment.id} className="fragment-card">
                 <h3>{fragment.title}</h3>
                 <p>Tags: {fragment.tags.join(', ')}</p>
-                <button onClick={() => openModal(fragment.code)}>👁 View</button>
+                <button className="view-btn" onClick={() => openModal(fragment.code)}>👁 View</button>
+
               </div>
             ))
           ) : (
